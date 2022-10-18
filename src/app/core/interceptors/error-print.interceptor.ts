@@ -19,7 +19,7 @@ export class ErrorPrintInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       tap({
-        error: (error) => {
+        error: (error: any) => {
           // incorrect credentials has statusCode === 0 due to CORS
           if (error.status === 0) {
             window.alert('Authorization problem occured');
