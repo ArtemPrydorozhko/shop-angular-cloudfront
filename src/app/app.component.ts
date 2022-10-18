@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    const authorization_token = window.btoa('ArtemPrydorozhko:TEST_PASSWORD');
-    window.localStorage.setItem('authorization_token', authorization_token);
+    const authorizationToken = window.btoa('ArtemPrydorozhko:TEST_PASSWORD');
+    window.localStorage.setItem('authorization_token', authorizationToken);
   }
 }
